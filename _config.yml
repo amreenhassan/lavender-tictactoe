@@ -1,0 +1,31 @@
+# _config.yml
+title: My Cute Pastel Lavender Site
+description: A site with a cute pastel lavender theme
+url: "https://yourusername.github.io"
+baseurl: ""
+theme: minima  # Or another theme you prefer
+
+# Optional settings
+markdown: kramdown
+highlighter: rouge
+
+# Theme colors
+colors:
+  background: "#f3e5f5"  # Light lavender
+  primary: "#d1c4e9"      # Light purple
+  secondary: "#f8bbd0"    # Light pink
+  accent: "#ffe082"        # Light yellow
+
+# Navigation settings
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Projects
+    url: /projects
+  - title: Contact
+    url: /contact
+
+# Custom CSS
+custom_css: "assets/css/style.css"  # Reference to your custom CSS
