@@ -2,6 +2,8 @@
 let board = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let gameActive = true;
+let playerXName = "Player X";
+let playerOName = "Player O";
 
 const winningConditions = [
     [0, 1, 2],
@@ -16,6 +18,16 @@ const winningConditions = [
 
 const statusDisplay = document.getElementById("status");
 
+// Start the game and hide the welcome screen
+function startGame() {
+    playerXName = document.getElementById("player-x-name").value || "Player X";
+    playerOName = document.getElementById("player-o-name").value || "Player O";
+    document.getElementById("welcome-screen").style.display = "none";
+    document.getElementById("game-screen").style.display = "block";
+    updateStatus();
+}
+
+// Handle cell click
 function handleClick(index) {
     if (board[index] === "" && gameActive) {
         board[index] = currentPlayer;
@@ -25,11 +37,18 @@ function handleClick(index) {
     }
 }
 
+// Switch player turn
 function switchPlayer() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    statusDisplay.textContent = `It's ${currentPlayer}'s turn.`;
+    updateStatus();
 }
 
+// Update status message with player names
+function updateStatus() {
+    statusDisplay.textContent = `It's ${currentPlayer === "X" ? playerXName : playerOName}'s turn.`;
+}
+
+// Check for winner or draw
 function checkWinner() {
     let roundWon = false;
     for (let i = 0; i < winningConditions.length; i++) {
@@ -48,7 +67,7 @@ function checkWinner() {
     }
 
     if (roundWon) {
-        statusDisplay.textContent = `Player ${currentPlayer} has won!`;
+        statusDisplay.textContent = `🎉 ${currentPlayer === "X" ? playerXName : playerOName} wins! 🎉`;
         gameActive = false;
         return;
     }
@@ -59,10 +78,11 @@ function checkWinner() {
     }
 }
 
+// Reset the game
 function resetGame() {
     board = ["", "", "", "", "", "", "", "", ""];
     currentPlayer = "X";
     gameActive = true;
-    document.querySelectorAll(".cell").forEach(cell => cell.textContent = "");
-    statusDisplay.textContent = `It's ${currentPlayer}'s turn.`;
+    document.querySelectorAll(".cell").forEach(cell => (cell.textContent = ""));
+    updateStatus();
 }
