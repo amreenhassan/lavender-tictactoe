@@ -7,20 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tic Tac Toe</h1>
-    <div id="game-board">
-        <div class="cell" id="cell-0" onclick="handleClick(0)"></div>
-        <div class="cell" id="cell-1" onclick="handleClick(1)"></div>
-        <div class="cell" id="cell-2" onclick="handleClick(2)"></div>
-        <div class="cell" id="cell-3" onclick="handleClick(3)"></div>
-        <div class="cell" id="cell-4" onclick="handleClick(4)"></div>
-        <div class="cell" id="cell-5" onclick="handleClick(5)"></div>
-        <div class="cell" id="cell-6" onclick="handleClick(6)"></div>
-        <div class="cell" id="cell-7" onclick="handleClick(7)"></div>
-        <div class="cell" id="cell-8" onclick="handleClick(8)"></div>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <h1>🌸 Welcome to Tic Tac Toe 🌸</h1>
+        <div>
+            <label for="player-x-name">🎀 Enter Player X's name:</label>
+            <input type="text" id="player-x-name" placeholder="Player X">
+        </div>
+        <div>
+            <label for="player-o-name">🎀 Enter Player O's name:</label>
+            <input type="text" id="player-o-name" placeholder="Player O">
+        </div>
+        <button onclick="startGame()">🌟 Start Game 🌟</button>
     </div>
-    <div id="status"></div>
-    <button onclick="resetGame()">Restart Game</button>
+
+    <!-- Game Screen -->
+    <div id="game-screen" style="display:none;">
+        <h1>🌈 Tic Tac Toe 🌈</h1>
+        <div id="game-board">
+            <div class="cell" id="cell-0" onclick="handleClick(0)"></div>
+            <div class="cell" id="cell-1" onclick="handleClick(1)"></div>
+            <div class="cell" id="cell-2" onclick="handleClick(2)"></div>
+            <div class="cell" id="cell-3" onclick="handleClick(3)"></div>
+            <div class="cell" id="cell-4" onclick="handleClick(4)"></div>
+            <div class="cell" id="cell-5" onclick="handleClick(5)"></div>
+            <div class="cell" id="cell-6" onclick="handleClick(6)"></div>
+            <div class="cell" id="cell-7" onclick="handleClick(7)"></div>
+            <div class="cell" id="cell-8" onclick="handleClick(8)"></div>
+        </div>
+        <div id="status"></div>
+        <button onclick="resetGame()">✨ Restart Game ✨</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
