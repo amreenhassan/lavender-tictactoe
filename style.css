@@ -1,19 +1,60 @@
 /* style.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #fce4ec; /* Light pastel pink */
     text-align: center;
-    background-color: #f3e5f5; /* Pastel background */
+    margin: 0;
 }
 
 h1 {
-    color: #4a148c;
+    color: #880e4f; /* Deep magenta for titles */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#welcome-screen input {
+    padding: 8px;
+    margin: 10px;
+    border: 2px solid #ce93d8; /* Soft lavender border */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #6a1b9a; /* Darker lavender text */
+    background-color: #f3e5f5; /* Light pastel lavender background */
+}
+
+#welcome-screen label {
+    font-size: 1.2rem;
+    color: #d81b60; /* Bright pastel pink for labels */
+}
+
+button {
+    background-color: #f48fb1; /* Pastel pink button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 10px rgba(240, 98, 146, 0.3);
+}
+
+button:hover {
+    background-color: #ec407a; /* Darker pastel pink on hover */
 }
 
 #game-board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 10px;
+    gap: 15px;
     margin: 20px auto;
     max-width: 320px;
 }
@@ -21,36 +62,33 @@ h1 {
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #d1c4e9;
+    background-color: #e1bee7; /* Light pastel lavender */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    color: #4a148c;
+    color: #6a1b9a; /* Deep lavender */
     cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(106, 27, 154, 0.2);
 }
 
 .cell:hover {
-    background-color: #b39ddb;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff6f60;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff8a65;
+    background-color: #d1c4e9; /* Slightly darker lavender on hover */
+    box-shadow: 0 8px 12px rgba(106, 27, 154, 0.4);
 }
 
 #status {
     margin-top: 20px;
-    font-size: 1.2rem;
-    color: #4a148c;
+    font-size: 1.5rem;
+    color: #6a1b9a; /* Deep lavender for status text */
+}
+
+button:hover {
+    box-shadow: 0 8px 16px rgba(240, 98, 146, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
 }
