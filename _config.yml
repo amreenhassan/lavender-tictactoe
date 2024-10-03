@@ -1,31 +1,57 @@
 # _config.yml
-title: My Cute Pastel Lavender Site
-description: A site with a cute pastel lavender theme
-url: "https://yourusername.github.io"
-baseurl: ""
-theme: minima  # Or another theme you prefer
 
-# Optional settings
-markdown: kramdown
-highlighter: rouge
+# Site settings
+title: "Amreen's Tic Tac Toe Game"
+description: "A fun and colorful Tic Tac Toe game with pastel pink and lavender hues"
+baseurl: "" # Leave this blank if deploying to the root of the domain
+url: "https://your-github-username.github.io" # Your GitHub Pages URL
+theme: jekyll-theme-cayman
 
-# Theme colors
-colors:
-  background: "#f3e5f5"  # Light lavender
-  primary: "#d1c4e9"      # Light purple
-  secondary: "#f8bbd0"    # Light pink
-  accent: "#ffe082"        # Light yellow
-
-# Navigation settings
-nav:
-  - title: Home
-    url: /
-  - title: About
-    url: /about
-  - title: Projects
-    url: /projects
-  - title: Contact
-    url: /contact
+# Appearance settings
+theme_color: "#ff4081" # Bright Pink
+background_color: "#f3e5f5" # Pastel Lavender
 
 # Custom CSS
-custom_css: "assets/css/style.css"  # Reference to your custom CSS
+sass:
+  style: expanded
+  load_paths:
+    - _sass
+  custom: "assets/css/custom.scss"
+
+# Social links (optional)
+social_links:
+  github: https://github.com/your-github-username
+  twitter: https://twitter.com/your-twitter-username
+
+# Custom Variables for Styling
+colors:
+  primary: "#ff4081"  # Bright Pink
+  secondary: "#ce93d8" # Soft Lavender
+  accent: "#e040fb"   # Vibrant Magenta
+  background: "#f8bbd0" # Light Pink
+
+# Navbar Settings
+navbar:
+  title: "Amreen's Tic Tac Toe"
+  links:
+    - title: "Home"
+      url: "/"
+    - title: "Game"
+      url: "/tic-tac-toe"
+    - title: "GitHub"
+      url: "https://github.com/your-github-username"
+      
+# Footer
+footer:
+  message: "Made with ❤️ by Amreen"
+  background: "#ff80ab" # Bright Pink for footer background
+  color: "#ffffff"
+
+# Additional customizations
+permalink: pretty
+paginate: 5
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
